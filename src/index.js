@@ -1,4 +1,6 @@
 import {home} from './home';
+import {menu} from './menu';
+import {contact} from './contact';
 
 const headerElement = () => {
     const header = document.createElement('header');
@@ -26,4 +28,21 @@ const displayPage = (() => {
     content.appendChild(headerElement());
     content.appendChild(home());
     content.appendChild(footerElement());
+})();
+
+const switchTabs = (() => {
+    document.querySelectorAll('li').forEach(node => {
+        node.addEventListener('click', () => {
+            const content = document.getElementById('content');
+            if (node.textContent == 'Home') {
+                content.replaceChild(home(), content.children[1]);
+            }
+            else if (node.textContent == 'Menu') {
+                content.replaceChild(menu(), content.children[1]);
+            }
+            else if (node.textContent == 'Contact') {
+                content.replaceChild(contact(), content.children[1]);
+            }
+        });
+    });
 })();
