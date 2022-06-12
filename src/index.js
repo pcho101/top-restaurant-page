@@ -2,14 +2,15 @@ import {home} from './home';
 import {menu} from './menu';
 import {contact} from './contact';
 
+const headerItems = ['Home', 'Menu', 'Contact'];
+
 const headerElement = () => {
     const header = document.createElement('header');
     const ul = document.createElement('ul');
-    const liNames = ['Home', 'Menu', 'Contact'];
     header.appendChild(ul);
-    for (let i = 0; i < liNames.length; i++) {
+    for (let i = 0; i < headerItems.length; i++) {
         const li = document.createElement('li');
-        li.textContent = liNames[i];
+        li.textContent = headerItems[i];
         ul.appendChild(li);
     }
     return header;
@@ -34,13 +35,13 @@ const switchTabs = (() => {
     document.querySelectorAll('li').forEach(node => {
         node.addEventListener('click', () => {
             const content = document.getElementById('content');
-            if (node.textContent == 'Home') {
+            if (node.textContent == headerItems[0]) {
                 content.replaceChild(home(), content.children[1]);
             }
-            else if (node.textContent == 'Menu') {
+            else if (node.textContent == headerItems[1]) {
                 content.replaceChild(menu(), content.children[1]);
             }
-            else if (node.textContent == 'Contact') {
+            else if (node.textContent == headerItems[2]) {
                 content.replaceChild(contact(), content.children[1]);
             }
         });
