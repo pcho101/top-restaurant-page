@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -6,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-color: #c58856;
 }
 
 #content {
@@ -88,6 +92,19 @@ footer>p {
     cursor: pointer;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
 form {
     padding: 20px;
     font-weight: 700;
@@ -125,4 +142,27 @@ button {
 
 button:hover {
     background-color: #552d16;
+}
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.active {
+    border-bottom: 4px solid #c58856;
+}
+
+li {
+    font-weight: 700;
+    padding-bottom: 6px;
+    border-bottom: 4px solid transparent;
+}
+
+li:hover {
+    border-bottom: 4px solid #a95f23;
 }
