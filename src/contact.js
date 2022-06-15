@@ -1,23 +1,21 @@
 const contact = () => {
     const main = document.createElement('main');
     const h1 = document.createElement('h1');
-    h1.textContent = 'Contact Us';
-    main.appendChild(h1);
-    
     const hours = document.createElement('p');
     const address = document.createElement('p');
     const phone = document.createElement('p');
-    
+    const para = document.createElement('p');
+
+    h1.textContent = 'Contact Us';
     hours.textContent = 'Hours: Everyday 06:00 - 22:00'
     address.textContent = 'Address: 5678 Imaginary Boulevard'
     phone.textContent = 'Phone: 123 - 456 - 7890'
-    
+    para.textContent = 'Leave us your feedback on our products and services.'
+
+    main.appendChild(h1);
     main.appendChild(hours);
     main.appendChild(address);
     main.appendChild(phone);
-    
-    const para = document.createElement('p');
-    para.textContent = 'Leave us your feedback on our products and services.'
     main.appendChild(para);
     main.appendChild(buildForm());
 

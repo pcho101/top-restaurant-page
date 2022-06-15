@@ -1,17 +1,21 @@
+import Dish1 from './images/shrimp-dumpling.jpg';
+import Dish2 from './images/xiaolongbao.jpg';
+import Dish3 from './images/pork-dumpling.jpg';
+import Dish4 from './images/lotus-leaf-rice.jpg';
+import Dish5 from './images/egg-tart.jpg';
+import Dish6 from './images/sesame-balls.jpg';
+
 const menu = () => {
     const main = document.createElement('main');
     const h1 = document.createElement('h1');
-    h1.classList.add('menu');
-    h1.textContent = 'Menu';
-    
     const h2 = document.createElement('h2');
-    h2.classList.add('featured');
-    h2.textContent = 'Featured Dishes';
-
-    main.appendChild(h1);
-    main.appendChild(h2);
-
     const menuContainer = document.createElement('div');
+
+    h1.textContent = 'Menu';
+    h2.textContent = 'Featured Dishes';
+    
+    h1.classList.add('menu');
+    h2.classList.add('featured');
     menuContainer.classList.add('menu-container');
     
     menuContainer.appendChild(buildMenu(shrimpDumpling));
@@ -20,28 +24,54 @@ const menu = () => {
     menuContainer.appendChild(buildMenu(lotusLeafRice));
     menuContainer.appendChild(buildMenu(eggTart));
     menuContainer.appendChild(buildMenu(sesameBalls));
+
+    main.appendChild(h1);
+    main.appendChild(h2);
     main.appendChild(menuContainer);
 
     return main;
 }
 
-const Course = (title, text, source, id) => {
-    return {title, text, source, id}
+const Course = (source, title, text, id) => {
+    return {source, title, text, id}
 };
 
-const shrimpDumpling = Course('Shrimp Dumpling', 'Shrimp wrapped with translucent wrapper', 'shrimp-dumpling.jpg', 'shrimp-dumpling');
-const xiaoLongBao = Course('Xiao Long Bao', 'Steamed soup dumplings filled with pork and broth', 'xiaolongbao.jpg', 'xiaolongbao');
-const porkDumpling = Course('Pork Dumpling', 'Dumpling with pork, shrimp and mushroom', 'pork-dumpling.jpg', 'pork-dumpling');
-const lotusLeafRice = Course('Lotus Leaf Rice', 'Sticky rice wrapped in lotus leaf', 'lotus-leaf-rice.jpg', 'lotus-leaf-rice');
-const eggTart = Course('Egg Tart', 'Custard tart with egg', 'egg-tart.jpg', 'egg-tart');
-const sesameBalls = Course('Sesame Balls', 'Deep fried dough filled with sweet paste', 'sesame-balls.jpg', 'sesame-balls');
-
-// const shrimpDumpling = Course('Shrimp Dumpling', 'Shrimp wrapped with translucent wrapper', 'shriming.jpg', 'shrimp-dumpling');
-// const xiaoLongBao = Course('Xiao Long Bao', 'Steamed soup dumplings filled with pork and broth', 'xiaolao.jpg', 'xiaolongbao');
-// const porkDumpling = Course('Pork Dumpling', 'Dumpling with pork, shrimp and mushroom', 'pork-ng.jpg', 'pork-dumpling');
-// const lotusLeafRice = Course('Lotus Leaf Rice', 'Sticky rice wrapped in lotus leaf', 'lotus-lece.jpg', 'lotus-leaf-rice');
-// const eggTart = Course('Egg Tart', 'Custard tart with egg', 'egg-tt.jpg', 'egg-tart');
-// const sesameBalls = Course('Sesame Balls', 'Deep fried dough filled with sweet paste', 'sesae-e.jpg', 'sesame-balls');
+const shrimpDumpling = Course(
+    Dish1,
+    'Shrimp Dumpling',
+    'Shrimp wrapped with translucent wrapper',
+    'shrimp-dumpling'
+    );
+const xiaoLongBao = Course(
+    Dish2,
+    'Xiao Long Bao',
+    'Steamed soup dumplings with pork and broth',
+    'xiaolongbao'
+    );
+const porkDumpling = Course(
+    Dish3,
+    'Pork Dumpling',
+    'Dumpling with pork, shrimp and mushroom',
+    'pork-dumpling'
+    );
+const lotusLeafRice = Course(
+    Dish4,
+    'Lotus Leaf Rice',
+    'Sticky rice wrapped in lotus leaf',
+    'lotus-leaf-rice'
+    );
+const eggTart = Course(
+    Dish5,
+    'Egg Tart',
+    'Custard tart with egg',
+    'egg-tart'
+    );
+const sesameBalls = Course(
+    Dish6,
+    'Sesame Balls',
+    'Deep fried dough filled with sweet paste',
+    'sesame-balls'
+    );
 
 const buildMenu = (Course) => {
     const dish = document.createElement('div');

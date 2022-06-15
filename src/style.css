@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('images/dimsum.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #c58856;
+    font-family: 'Raleway', sans-serif;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    gap: 32px;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    flex: 1;
+    padding-bottom: 20px;
+}
+
+.restaurant-name {
+    font-size: 4rem;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: normal;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    height: 200px;
+    width: 250px;
+    border: 2px solid #7a4221;
+    border-radius: 10px;
+}
+
+.dish {
+    text-align: center;
+    padding: 10px;
+    min-width: 40vw;
+}
+
+h2 {
+    margin: 0px;
+    text-align: center;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.dish>p {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+footer>p {
+    font-size: 0.8rem;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
+form {
+    padding: 20px;
+    font-weight: 700;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+main>p {
+    margin: 0px;
+    text-align: center;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    padding: 0.5rem;
+    font-weight: 700;
+    color: white;
+    background-color: #7a4221;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #552d16;
+}
+
+.active {
+    border-bottom: 4px solid #c58856;
+}
+
+li {
+    font-weight: 700;
+    padding-bottom: 6px;
+    border-bottom: 4px solid transparent;
+}
+
+li:hover {
+    border-bottom: 4px solid #a95f23;
+}
